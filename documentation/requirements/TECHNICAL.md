@@ -1,5 +1,13 @@
 # Technical Requirements
 
+This document describes the technical requirements for the application.
+
+In generel, this is (for now) a personal project and not a commercial product. The application will be hosted on our own servers and not on a cloud provider. We want to use pragmatic solutions that are easy to maintain and scale if needed, but not over-engineer something and never come to a product.
+
+## Technologies
+
+In terms of technologies we are generally open to use any technology that is suitable for the requirements. Since this will not be an application that is heavily processing data, we could go for a stack that utilizes TypeScript. That would also benefit us when we want to share types, create a react native application and more.
+
 ## Deployment
 
 The application needs to be able to run locally in dev mode on the developers machine and should not require 3rd party services like remote databases, storages, etc., we want to host everything on our own servers with a convenient solution like docker compose for now, with the possibility to scale up to a more complex setup later if we want to.
@@ -28,7 +36,11 @@ The application should have a RESTful API that is easy to use and understand. Th
 
 ## Persistence
 
-The application should use appropriate data persistence technologies based on the requirements for the data. We prefer open source solutions and technologies that run on our own servers without licensing fees.
+The application should use appropriate data persistence technologies based on the requirements for the data. We prefer open source solutions and technologies that run on our own servers without licensing fees. We are also looking for secure and performant solutions, but are open to pragmatic "good for now" solutions.
+
+## Local LLM
+
+The reference local LLM in the documents means that we use a LLM that runs on the same server as the application, for example with Ollama or a custom built LLM. The exact models are open to discussion and will be researched during the development phase.
 
 ## Future Features
 
