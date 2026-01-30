@@ -2,7 +2,7 @@
 
 This document describes the technical requirements for the application.
 
-In generel, this is (for now) a personal project and not a commercial product. The application will be hosted on our own servers and not on a cloud provider. We want to use pragmatic solutions that are easy to maintain and scale if needed, but not over-engineer something and never come to a product.
+In general, this is (for now) a personal project and not a commercial product. The application will be hosted on our own servers and not on a cloud provider. We want to use pragmatic solutions that are easy to maintain and scale if needed, but not over-engineer something and never come to a product.
 
 ## Technologies
 

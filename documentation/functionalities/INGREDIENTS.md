@@ -14,7 +14,7 @@ Ingredients can have types, for example:
 - 🌿 Herb
 - 🌾 Grain
 
-The types are determined automatically be a local LLM. Not every ingredient has to have a type, for example a `Egg` would not have a type. The LLM will prefill the type based on the ingredient name and the user can change it if they wish.
+The types are determined automatically by a local LLM. Not every ingredient has to have a type, for example a `Egg` would not have a type. The LLM will prefill the type based on the ingredient name and the user can change it if they wish.
 
 ## Deletion
 
