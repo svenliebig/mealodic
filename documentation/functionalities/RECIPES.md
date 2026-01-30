@@ -2,7 +2,7 @@
 
 Users can create meal recipes and assign them to meal plans or to derive shopping lists from them. Recipes contain ingredients, which will be derived directly from the recipe steps. The user only has to write the recipe steps and the ingredients will be automatically determined.
 
-Recipes are globally available to all users and families and are treated as a shared resource.
+Recipes are publicly available to all anonymous visitors and authenticated users and families and are treated as a shared resource.
 
 ## Creating a Recipe
 
@@ -10,7 +10,7 @@ When a user creates or edits a recipe they can give the recipe a name, a descrip
 
 ### Future
 
-Recipes can have cooking durations, cooking difficulty and diary types.
+Recipes can have cooking durations, cooking difficulty and dietary types.
 
 ## Serving Units
 

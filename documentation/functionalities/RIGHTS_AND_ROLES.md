@@ -10,7 +10,7 @@ After signup the user can choose an account name, this is purely cosmetic and wi
 
 ### Password Policy
 
-The minimum lenght of a password is 8 characters.
+The minimum length of a password is 8 characters.
 
 ## Password Reset
 
@@ -54,7 +54,7 @@ The permissions for the roles are described in the following table:
 | Edit Recipe | ✅ | ✅ (own recipes or family recipes) |
 | Delete Recipe | ✅ | ✅ (own recipes or family recipes) |
 | Create Ingredient | ✅ | ✅ |
-| Edit Ingredient | ✅ | ✅ (own ingredients or family ingredients) |
+| Edit Ingredient | ✅ | ✅ (when author of ingredient is the user) |
 | Delete Ingredient | ✅ | ❌ |
 | Create Meal Plan | ✅ | ✅ |
 | Edit Meal Plan | ✅ | ✅ (own meal plans or family meal plans) |

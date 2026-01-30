@@ -12,6 +12,10 @@ Authenticated users will see the main application layout, they can browse recipe
 
 If user go on their family, meal plan, shopping list, etc. but don't have any data in it, the application will show a message that they don't have any data in it and they can create some.
 
+### Notifications
+
+The application will show notifications to the user when they have new data in their family, meal plan, shopping list, etc. The user can click on the notification to go to the corresponding section.
+
 ## Admin Users
 
 Admin users will see the admin panel, they can manage users, recipes, meal plans, shopping lists, ingredients, families, etc.

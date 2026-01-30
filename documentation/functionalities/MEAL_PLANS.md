@@ -28,26 +28,6 @@ Depending on the time of the day the meal plan will have different meal types.
 
 If recipes are referenced in the meal plan that got deleted by the author or by an admin, the meal plan will show a warning instead in place of the meal position and the user can choose to remove the recipe from the meal plan.
 
-## Shopping Lists
-
-When the user creates a shopping list from a meal plan, the application will generate a shopping list based on the ingredients of the meals in the meal plan. The shopping list will show the ingredients and the amount of the ingredients needed. The user can also edit the shopping list by adding or removing ingredients or changing the amount of the ingredients.
-
-### Calculating Ingredients
-
-The shopping list will go through all the recipes in the meal plan and calculate the total amount of ingredients needed for the meal plan. The application will also calculate the total amount of ingredients needed for the meal plan based on the servings and the ingredients in the recipes. For example if two tomatoes are need on monday and 4 on friday, the shopping list will show 6 tomatoes.
-
-### Sorting
-
-The shopping list will be sorted by the ingredient type, for example all vegetables will be at the top, then all fruits, then all meats, etc.
-
-### Adding Ingredients
-
-The user can add ingredients by referencing or just plain text the user wants to add. We don't want to be too restrictive here so the use can add special needs reminder if they need to.
-
-### Ignoring Ingredients
-
-The user can ignore specific ingredients from shopping lists entirely by clicking on the ingredient and selecting the `Ignore` option. The ingredient will then be removed from the shopping list and future shopping lists will not include it. The user can see all it's ignored ingredients in the profile settings under Shopping List > Ignored Ingredients.
-
 ## Future
 
 ### Meal Plan Printing

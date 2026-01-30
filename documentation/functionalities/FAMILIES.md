@@ -16,4 +16,4 @@ The user can remove users from a family by clicking on the remove user button in
 
 ## Ownership
 
-If an owner leaves the family he needs to annoinate a new owner. If the user is the last owner of the family, the family, all it's meal plans and shopping lists will be deleted.
+If an owner leaves the family he needs to nominate a new owner. If the user is the last owner of the family, the family, all it's meal plans and shopping lists will be deleted.
