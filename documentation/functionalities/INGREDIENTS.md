@@ -18,7 +18,7 @@ The types are determined automatically be a local LLM. Not every ingredient has 
 
 ## Deletion
 
-Only admins can delete ingredients. When deleting an incredient, the user is informed which recipes are affected by the deletion. If any recipes are affected, the user needs to select a replacement ingredient. If no replacement ingredient is selected, the ingredient can not be deleted.
+Only admins can delete ingredients. When deleting an ingredient, the user is informed which recipes are affected by the deletion. If any recipes are affected, the user needs to select a replacement ingredient. If no replacement ingredient is selected, the ingredient can not be deleted.
 
 When deleted the ingredient is marked as deleted and will not be shown in any shopping lists or meal plans. The admin can see the deleted ingredients in the admin panel under Ingredients > Deleted Ingredients and restore them if they wish.
 

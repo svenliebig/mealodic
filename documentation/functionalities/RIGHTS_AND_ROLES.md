@@ -8,6 +8,10 @@ Every user can signup for the application. The user will be asked to provide an 
 
 After signup the user can choose an account name, this is purely cosmetic and will be shown to other users.
 
+### Password Policy
+
+The minimum lenght of a password is 8 characters.
+
 ## Password Reset
 
 The user can reset their password by clicking on the password reset link in the email. The user will be asked to provide a new password. The new password will be used to login to the application.
@@ -18,9 +22,13 @@ The user will be asked to verify their email address after signup. The user will
 
 ## Account Deletion
 
-The user can delete their account by clicking on the account deletion link in the email. The user will be asked to provide a reason for the deletion. The user will be asked to click on the account deletion link in the email. The account will be deleted and the user will not be able to login to the application anymore.
+The user can delete their account in the profile settings. The user will be asked to provide a reason for the deletion. The account will be deleted and the user will not be able to login to the application anymore.
 
 Any recipes referenced to the user will be by "Unknown Author", admins can change the author to another user or to "Unknown Author" if they wish.
+
+## GDPR Export
+
+The user can export their data in a GDPR compliant way. The user will be asked to provide a reason for the export. The data will be exported and the user will be able to download the data.
 
 ## Roles
 
@@ -28,6 +36,8 @@ There are two roles in the application:
 
 - Admin
 - User
+
+Admins will have an admin panel for users, families, recipes, meal plans, shopping lists, ingredients, etc., allowing them to manage the application and the data entirely.
 
 ## Permissions
 
@@ -45,7 +55,7 @@ The permissions for the roles are described in the following table:
 | Delete Recipe | ✅ | ✅ (own recipes or family recipes) |
 | Create Ingredient | ✅ | ✅ |
 | Edit Ingredient | ✅ | ✅ (own ingredients or family ingredients) |
-| Delete Ingredient | ✅ | ✅ (own ingredients or family ingredients) |
-| Create Meal Plan | ✅ | ✅ (own meal plans or family meal plans) |
+| Delete Ingredient | ✅ | ❌ |
+| Create Meal Plan | ✅ | ✅ |
 | Edit Meal Plan | ✅ | ✅ (own meal plans or family meal plans) |
 | Delete Meal Plan | ✅ | ✅ (own meal plans or family meal plans) |

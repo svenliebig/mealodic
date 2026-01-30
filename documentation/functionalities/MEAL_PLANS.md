@@ -1,6 +1,6 @@
 # Meal Plans
 
-Individual users or families can create different meal plans that show the user what they should eat on what day. A meal plan can have up to five meals per day, maybe more in the future. A meal plan contains seven days (weekly by default), the user can choose the starting week day of the meal plan.
+Individual users or families can create different meal plans that show the user what they should eat on what day. A meal plan can have up to five meals per day, maybe more in the future. A meal plan contains seven days (weekly by default), the user can choose the starting week day of the meal plan. Meal plans are not tied to dates, they are only an abstract plan and the user decides on which date they implement it.
 
 ## Creating
 
@@ -47,3 +47,9 @@ The user can add ingredients by referencing or just plain text the user wants to
 ### Ignoring Ingredients
 
 The user can ignore specific ingredients from shopping lists entirely by clicking on the ingredient and selecting the `Ignore` option. The ingredient will then be removed from the shopping list and future shopping lists will not include it. The user can see all it's ignored ingredients in the profile settings under Shopping List > Ignored Ingredients.
+
+## Future
+
+### Meal Plan Printing
+
+The user can export the meal plan to a PDF file. The PDF file will contain the meal plan with the recipes. The PDF file will be a printable format that the user can use it to inform their family about the meal plan.

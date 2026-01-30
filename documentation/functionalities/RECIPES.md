@@ -8,6 +8,10 @@ Recipes are globally available to all users and families and are treated as a sh
 
 When a user creates or edits a recipe they can give the recipe a name, a description (origin, cuisine, etc.), upload pictures and configure the recipe steps. The user can just use human language to describe the recipe, with the help of a local LLM we will scan the steps and convert the recipe into a structured format that we will call [RMD (Recipe Markdown)](#recipe-markdown).
 
+### Future
+
+Recipes can have cooking durations, cooking difficulty and diary types.
+
 ## Serving Units
 
 When the user creates a recipe they can choose a serving unit for the recipe. For example the user can decide the recipe is 2 servings with the amounts they selected for their ingredients. Based on this we can calculate the nutritions per meal once the ingredients have nutritional information and user can scale the recipe to their needs.
