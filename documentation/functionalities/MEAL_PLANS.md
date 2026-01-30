@@ -8,6 +8,10 @@ When creating a meal plan the user can give the meal plan a name and is forwarde
 
 The user can choose the portions (servings) for each meal, the application will calculate the total amount of ingredients needed for the meal plan based on the servings and the ingredients in the recipes.
 
+### Adding Meals (Recipes)
+
+The user can add recipes from a recipe menu, the menu will show all recipes the user and family member have created as well as all favorites and custom lists the user created. The user can drag and drop the recipes into the calendar view.
+
 ## Meal Types
 
 The meal plan can have different meal types, for example:

@@ -12,6 +12,18 @@ When a user creates or edits a recipe they can give the recipe a name, a descrip
 
 When the user creates a recipe they can choose a serving unit for the recipe. For example the user can decide the recipe is 2 servings with the amounts they selected for their ingredients. Based on this we can calculate the nutritions per meal once the ingredients have nutritional information and user can scale the recipe to their needs.
 
+## Browsing
+
+The application gives user the possibility to browse recipes by fuzzy searching (name, author, cuisine, description, etc.). by default all the recent recipes are shown in a lazy loaded infinite scroll list.
+
+### Future
+
+Filtering, Sorting, etc.
+
+## Lists
+
+User can add recipes to their lists by clicking on the list button in the recipe details. The recipe will be added to the list and the user can see it in the list section. The default list will be favorites, but the user can create different lists if they wish.
+
 ## Recipe Markdown
 
 The structure for recipes will be be internal, the user only see's text when they write the recipe steps. The LLM will then convert this into a structured format text we call RMD (Recipe Markdown).
