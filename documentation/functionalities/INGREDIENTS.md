@@ -1,6 +1,6 @@
 # Ingredients
 
-Ingredients can be created individually in the ingredients section or when creating a recipe and adding a new ingredient that the application doesn't know yet.
+Ingredients can be created individually in the ingredients section or when creating a recipe and adding a new ingredient that the application doesn't know yet. Ingredients are globally available to all users and families and are treated as a shared resource.
 
 ## Ingredient Types
 
@@ -14,7 +14,13 @@ Ingredients can have types, for example:
 - 🌿 Herb
 - 🌾 Grain
 
-The types are determined automatically be a local LLM. Not every ingredient has to have a type, for example a `Egg` would not have a type.
+The types are determined automatically be a local LLM. Not every ingredient has to have a type, for example a `Egg` would not have a type. The LLM will prefill the type based on the ingredient name and the user can change it if they wish.
+
+## Deletion
+
+Only admins can delete ingredients. When deleting an incredient, the user is informed which recipes are affected by the deletion. If any recipes are affected, the user needs to select a replacement ingredient. If no replacement ingredient is selected, the ingredient can not be deleted.
+
+When deleted the ingredient is marked as deleted and will not be shown in any shopping lists or meal plans. The admin can see the deleted ingredients in the admin panel under Ingredients > Deleted Ingredients and restore them if they wish.
 
 ## Future
 
