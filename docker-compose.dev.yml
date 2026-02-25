@@ -12,7 +12,7 @@ services:
       context: .
       dockerfile: packages/web/Dockerfile.dev
     ports:
-      - "5173:5173"
+      - '5173:5173'
     volumes:
       - ./packages/web/src:/app/packages/web/src
       - ./packages/web/index.html:/app/packages/web/index.html

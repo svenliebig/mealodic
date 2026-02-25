@@ -1,17 +1,17 @@
-import swaggerJsdoc from "swagger-jsdoc";
-import { config } from "../config.js";
+import swaggerJsdoc from 'swagger-jsdoc';
+import { config } from '../config.js';
 
 const options: swaggerJsdoc.Options = {
   definition: {
-    openapi: "3.0.3",
+    openapi: '3.0.3',
     info: {
-      title: "Mealodic API",
-      version: "1.0.0",
+      title: 'Mealodic API',
+      version: '1.0.0',
       description:
-        "API for Mealodic — a meal planning application for individuals and families. " +
-        "Manage recipes, ingredients, meal plans, shopping lists, and family groups.",
+        'API for Mealodic — a meal planning application for individuals and families. ' +
+        'Manage recipes, ingredients, meal plans, shopping lists, and family groups.',
       contact: {
-        name: "Mealodic Team",
+        name: 'Mealodic Team',
       },
     },
     servers: [
@@ -23,51 +23,51 @@ const options: swaggerJsdoc.Options = {
     components: {
       schemas: {
         ApiResponse: {
-          type: "object",
+          type: 'object',
           properties: {
-            data: { description: "Response payload" },
-            error: { $ref: "#/components/schemas/ApiError" },
-            meta: { $ref: "#/components/schemas/PaginationMeta" },
+            data: { description: 'Response payload' },
+            error: { $ref: '#/components/schemas/ApiError' },
+            meta: { $ref: '#/components/schemas/PaginationMeta' },
           },
         },
         ApiError: {
-          type: "object",
-          required: ["code", "message"],
+          type: 'object',
+          required: ['code', 'message'],
           properties: {
             code: {
-              type: "string",
+              type: 'string',
               enum: [
-                "BAD_REQUEST",
-                "UNAUTHORIZED",
-                "FORBIDDEN",
-                "NOT_FOUND",
-                "CONFLICT",
-                "VALIDATION_ERROR",
-                "RATE_LIMIT_EXCEEDED",
-                "INTERNAL_ERROR",
-                "SERVICE_UNAVAILABLE",
+                'BAD_REQUEST',
+                'UNAUTHORIZED',
+                'FORBIDDEN',
+                'NOT_FOUND',
+                'CONFLICT',
+                'VALIDATION_ERROR',
+                'RATE_LIMIT_EXCEEDED',
+                'INTERNAL_ERROR',
+                'SERVICE_UNAVAILABLE',
               ],
             },
-            message: { type: "string" },
+            message: { type: 'string' },
             details: {
-              type: "object",
+              type: 'object',
               additionalProperties: true,
             },
           },
         },
         PaginationMeta: {
-          type: "object",
+          type: 'object',
           properties: {
-            page: { type: "integer" },
-            pageSize: { type: "integer" },
-            total: { type: "integer" },
-            totalPages: { type: "integer" },
+            page: { type: 'integer' },
+            pageSize: { type: 'integer' },
+            total: { type: 'integer' },
+            totalPages: { type: 'integer' },
           },
         },
       },
     },
   },
-  apis: ["./src/routes/**/*.ts"],
+  apis: ['./src/routes/**/*.ts'],
 };
 
 export const swaggerSpec = swaggerJsdoc(options);

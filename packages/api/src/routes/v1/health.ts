@@ -1,5 +1,5 @@
-import { Router } from "express";
-import { sendSuccess } from "../../helpers/response.js";
+import { Router } from 'express';
+import { sendSuccess } from '../../helpers/response.js';
 
 const router = Router();
 
@@ -30,11 +30,11 @@ const router = Router();
  *                     version:
  *                       type: string
  */
-router.get("/", (_req, res) => {
+router.get('/', (_req, res) => {
   sendSuccess(res, {
-    status: "ok",
+    status: 'ok',
     timestamp: new Date().toISOString(),
-    version: "1.0.0",
+    version: '1.0.0',
   });
 });
 

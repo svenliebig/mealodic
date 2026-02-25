@@ -1,19 +1,17 @@
-import type { Request, Response, NextFunction } from "express";
-import type { AuthUser } from "@mealodic/shared";
-import { AppRole } from "@mealodic/shared";
-import type { KeycloakClient } from "../lib/keycloak.js";
+import type { Request, Response, NextFunction } from 'express';
+import type { AuthUser } from '@mealodic/shared';
+import { AppRole } from '@mealodic/shared';
+import type { KeycloakClient } from '../lib/keycloak.js';
 
-declare global {
-  namespace Express {
-    interface Request {
-      user?: AuthUser;
-    }
+declare module 'express' {
+  interface Request {
+    user?: AuthUser;
   }
 }
 
 function extractBearerToken(req: Request): string | null {
   const header = req.headers.authorization;
-  if (!header?.startsWith("Bearer ")) {
+  if (!header?.startsWith('Bearer ')) {
     return null;
   }
   return header.slice(7);
@@ -28,7 +26,7 @@ export function authenticate(keycloak: KeycloakClient) {
     const token = extractBearerToken(req);
 
     if (!token) {
-      res.status(401).json({ error: "Missing or invalid authorization header" });
+      res.status(401).json({ error: 'Missing or invalid authorization header' });
       return;
     }
 
@@ -37,9 +35,8 @@ export function authenticate(keycloak: KeycloakClient) {
       req.user = keycloak.extractUser(claims);
       next();
     } catch (err) {
-      const message =
-        err instanceof Error ? err.message : "Token validation failed";
-      res.status(401).json({ error: "Invalid token", details: message });
+      const message = err instanceof Error ? err.message : 'Token validation failed';
+      res.status(401).json({ error: 'Invalid token', details: message });
     }
   };
 }
@@ -51,13 +48,13 @@ export function authenticate(keycloak: KeycloakClient) {
 export function requireRole(...roles: AppRole[]) {
   return (req: Request, res: Response, next: NextFunction) => {
     if (!req.user) {
-      res.status(401).json({ error: "Not authenticated" });
+      res.status(401).json({ error: 'Not authenticated' });
       return;
     }
 
     const hasRole = roles.some((role) => req.user!.roles.includes(role));
     if (!hasRole) {
-      res.status(403).json({ error: "Insufficient permissions" });
+      res.status(403).json({ error: 'Insufficient permissions' });
       return;
     }
 

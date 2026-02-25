@@ -24,15 +24,15 @@ export interface PaginationMeta {
 }
 
 export type ErrorCode =
-  | "BAD_REQUEST"
-  | "UNAUTHORIZED"
-  | "FORBIDDEN"
-  | "NOT_FOUND"
-  | "CONFLICT"
-  | "VALIDATION_ERROR"
-  | "RATE_LIMIT_EXCEEDED"
-  | "INTERNAL_ERROR"
-  | "SERVICE_UNAVAILABLE";
+  | 'BAD_REQUEST'
+  | 'UNAUTHORIZED'
+  | 'FORBIDDEN'
+  | 'NOT_FOUND'
+  | 'CONFLICT'
+  | 'VALIDATION_ERROR'
+  | 'RATE_LIMIT_EXCEEDED'
+  | 'INTERNAL_ERROR'
+  | 'SERVICE_UNAVAILABLE';
 
 export const HTTP_STATUS: Record<ErrorCode, number> = {
   BAD_REQUEST: 400,

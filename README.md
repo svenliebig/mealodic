@@ -31,12 +31,12 @@ Meal planning for individuals and families.
 
 3. **Access the services:**
 
-   | Service  | URL                            | Credentials              |
-   | -------- | ------------------------------ | ------------------------ |
-   | Web App  | http://localhost:5173           |                          |
-   | API      | http://localhost:3000/api/v1/health |                     |
-   | Keycloak | http://localhost:8080           | admin / admin            |
-   | Database | localhost:5432                  | mealodic / mealodic_dev  |
+   | Service  | URL                                 | Credentials             |
+   | -------- | ----------------------------------- | ----------------------- |
+   | Web App  | http://localhost:5173               |                         |
+   | API      | http://localhost:3000/api/v1/health |                         |
+   | Keycloak | http://localhost:8080               | admin / admin           |
+   | Database | localhost:5432                      | mealodic / mealodic_dev |
 
 4. **Dev user for testing:**
 
@@ -64,18 +64,18 @@ Meal planning for individuals and families.
 
 ## Scripts
 
-| Command             | Description                        |
-| ------------------- | ---------------------------------- |
-| `pnpm dev`          | Start full Docker dev stack        |
-| `pnpm dev:api`      | Start API only (local)             |
-| `pnpm dev:web`      | Start web only (local)             |
-| `pnpm build`        | Build all packages                 |
-| `pnpm lint`         | Run ESLint                         |
-| `pnpm lint:fix`     | Run ESLint with auto-fix           |
-| `pnpm format`       | Format code with Prettier          |
-| `pnpm format:check` | Check formatting                   |
-| `pnpm typecheck`    | Run TypeScript type checking       |
-| `pnpm clean`        | Remove all build artifacts         |
+| Command             | Description                  |
+| ------------------- | ---------------------------- |
+| `pnpm dev`          | Start full Docker dev stack  |
+| `pnpm dev:api`      | Start API only (local)       |
+| `pnpm dev:web`      | Start web only (local)       |
+| `pnpm build`        | Build all packages           |
+| `pnpm lint`         | Run ESLint                   |
+| `pnpm lint:fix`     | Run ESLint with auto-fix     |
+| `pnpm format`       | Format code with Prettier    |
+| `pnpm format:check` | Check formatting             |
+| `pnpm typecheck`    | Run TypeScript type checking |
+| `pnpm clean`        | Remove all build artifacts   |
 
 ## Development
 
@@ -104,12 +104,12 @@ docker compose -f docker-compose.yml -f docker-compose.dev.yml up --build api
 
 ### Services
 
-| Service    | Description                    | Port  |
-| ---------- | ------------------------------ | ----- |
-| `db`       | PostgreSQL 17                  | 5432  |
-| `keycloak` | Keycloak 26.1 (auth server)   | 8080  |
-| `api`      | Fastify API (TypeScript)       | 3000  |
-| `web`      | React + Vite frontend          | 5173  |
+| Service    | Description                 | Port |
+| ---------- | --------------------------- | ---- |
+| `db`       | PostgreSQL 17               | 5432 |
+| `keycloak` | Keycloak 26.1 (auth server) | 8080 |
+| `api`      | Fastify API (TypeScript)    | 3000 |
+| `web`      | React + Vite frontend       | 5173 |
 
 ## Documentation
 

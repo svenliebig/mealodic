@@ -1,5 +1,5 @@
-import { Router } from "express";
-import { sendSuccess } from "../../helpers/response.js";
+import { Router } from 'express';
+import { sendSuccess } from '../../helpers/response.js';
 
 const router = Router();
 
@@ -18,7 +18,7 @@ const router = Router();
  *             schema:
  *               $ref: '#/components/schemas/ApiResponse'
  */
-router.get("/", (_req, res) => {
+router.get('/', (_req, res) => {
   sendSuccess(res, [], { page: 1, pageSize: 20, total: 0, totalPages: 0 });
 });
 
@@ -41,8 +41,8 @@ router.get("/", (_req, res) => {
  *       404:
  *         description: Meal plan not found
  */
-router.get("/:id", (req, res) => {
-  sendSuccess(res, { id: req.params["id"], placeholder: true });
+router.get('/:id', (req, res) => {
+  sendSuccess(res, { id: req.params['id'], placeholder: true });
 });
 
 export default router;

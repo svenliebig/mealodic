@@ -1,11 +1,6 @@
-import { createRemoteJWKSet, jwtVerify } from "jose";
-import type {
-  AuthUser,
-  KeycloakTokenClaims,
-  OidcDiscovery,
-  TokenPair,
-} from "@mealodic/shared";
-import { AppRole } from "@mealodic/shared";
+import { createRemoteJWKSet, jwtVerify } from 'jose';
+import type { AuthUser, KeycloakTokenClaims, OidcDiscovery, TokenPair } from '@mealodic/shared';
+import { AppRole } from '@mealodic/shared';
 
 export interface KeycloakClientOptions {
   baseUrl: string;
@@ -70,28 +65,25 @@ export class KeycloakClient {
   }
 
   private extractRoles(claims: KeycloakTokenClaims): AppRole[] {
-    const rawRoles: string[] =
-      claims.realm_roles ?? claims.realm_access?.roles ?? [];
+    const rawRoles: string[] = claims.realm_roles ?? claims.realm_access?.roles ?? [];
 
-    return rawRoles.filter((r): r is AppRole =>
-      Object.values(AppRole).includes(r as AppRole),
-    );
+    return rawRoles.filter((r): r is AppRole => Object.values(AppRole).includes(r as AppRole));
   }
 
   async refreshToken(refreshToken: string): Promise<TokenPair> {
     const body = new URLSearchParams({
-      grant_type: "refresh_token",
+      grant_type: 'refresh_token',
       client_id: this.options.clientId,
       refresh_token: refreshToken,
     });
 
     if (this.options.clientSecret) {
-      body.set("client_secret", this.options.clientSecret);
+      body.set('client_secret', this.options.clientSecret);
     }
 
     const response = await fetch(this.tokenEndpoint, {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body,
     });
 
@@ -112,7 +104,7 @@ export class KeycloakClient {
 
   async revokeToken(
     token: string,
-    tokenTypeHint: "access_token" | "refresh_token" = "refresh_token",
+    tokenTypeHint: 'access_token' | 'refresh_token' = 'refresh_token',
   ): Promise<void> {
     const body = new URLSearchParams({
       client_id: this.options.clientId,
@@ -121,17 +113,14 @@ export class KeycloakClient {
     });
 
     if (this.options.clientSecret) {
-      body.set("client_secret", this.options.clientSecret);
+      body.set('client_secret', this.options.clientSecret);
     }
 
-    const response = await fetch(
-      `${this.issuerUrl}/protocol/openid-connect/revoke`,
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body,
-      },
-    );
+    const response = await fetch(`${this.issuerUrl}/protocol/openid-connect/revoke`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body,
+    });
 
     if (!response.ok) {
       const text = await response.text();

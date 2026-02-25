@@ -1,6 +1,6 @@
 export enum AppRole {
-  User = "user",
-  Admin = "admin",
+  User = 'user',
+  Admin = 'admin',
 }
 
 export interface AuthUser {

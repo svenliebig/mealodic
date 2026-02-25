@@ -1,6 +1,6 @@
-import type { Response } from "express";
-import type { ApiResponse, PaginationMeta, ApiError, ErrorCode } from "@mealodic/shared";
-import { HTTP_STATUS } from "@mealodic/shared";
+import type { Response } from 'express';
+import type { ApiResponse, PaginationMeta, ApiError, ErrorCode } from '@mealodic/shared';
+import { HTTP_STATUS } from '@mealodic/shared';
 
 export function sendSuccess<T>(
   res: Response,
