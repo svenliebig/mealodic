@@ -1,16 +1,13 @@
-import Fastify from "fastify";
+import { createApp } from "./app.js";
+import { config } from "./config.js";
+import { logger } from "./logger.js";
 
-const server = Fastify({ logger: true });
+const app = createApp();
 
-server.get("/api/v1/health", async () => {
-  return { status: "ok", service: "mealodic-api" };
+app.listen(config.port, config.host, () => {
+  logger.info(
+    { port: config.port, host: config.host, env: config.nodeEnv },
+    `Mealodic API listening on http://${config.host}:${config.port}`,
+  );
+  logger.info(`API docs available at http://${config.host}:${config.port}/api/docs`);
 });
-
-const start = async () => {
-  const host = process.env.API_HOST ?? "0.0.0.0";
-  const port = Number(process.env.API_PORT ?? 3000);
-
-  await server.listen({ host, port });
-};
-
-start();
