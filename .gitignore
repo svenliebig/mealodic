@@ -4,6 +4,8 @@ build
 .env
 .env.local
 .env.*.local
+.env.*
+!.env.example
 *.log
 .turbo
 coverage

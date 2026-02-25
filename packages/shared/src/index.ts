@@ -26,3 +26,4 @@ export type HealthCheck = {
   version: string;
   timestamp: string;
 };
+export * from "./types/api.js";
