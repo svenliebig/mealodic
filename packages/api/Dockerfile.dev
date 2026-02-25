@@ -1,0 +1,12 @@
+FROM node:22-alpine
+RUN corepack enable
+
+WORKDIR /app
+
+COPY package.json pnpm-workspace.yaml ./
+COPY packages/api/package.json packages/api/
+COPY tsconfig.base.json ./
+
+RUN pnpm install --filter @mealodic/api
+
+CMD ["pnpm", "--filter", "@mealodic/api", "dev"]
