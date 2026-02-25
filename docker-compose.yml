@@ -29,7 +29,7 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - ./infrastructure/keycloak/realm-export.json:/opt/keycloak/data/import/realm-export.json:ro
+      - ./infrastructure/keycloak/mealodic-realm.json:/opt/keycloak/data/import/mealodic-realm.json:ro
     depends_on:
       db:
         condition: service_healthy
