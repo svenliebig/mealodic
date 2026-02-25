@@ -43,19 +43,19 @@ Admins will have an admin panel for users, families, recipes, meal plans, shoppi
 
 The permissions for the roles are described in the following table:
 
-| Permission | Admin | User |
-|------------|-------|------|
-| Create Recipe | ✅ | ✅ |
-| Create Families | ✅ | ✅ |
-| Edit Families | ✅ | ✅ (owned families) |
-| Delete Families | ✅ | ✅ (owned families) |
-| Add User to Family | ✅ | ✅ (owned families) |
-| Remove User from Family | ✅ | ✅ (owned families) |
-| Edit Recipe | ✅ | ✅ (own recipes or family recipes) |
-| Delete Recipe | ✅ | ✅ (own recipes or family recipes) |
-| Create Ingredient | ✅ | ✅ |
-| Edit Ingredient | ✅ | ✅ (when author of ingredient is the user) |
-| Delete Ingredient | ✅ | ❌ |
-| Create Meal Plan | ✅ | ✅ |
-| Edit Meal Plan | ✅ | ✅ (own meal plans or family meal plans) |
-| Delete Meal Plan | ✅ | ✅ (own meal plans or family meal plans) |
+| Permission              | Admin | User                                       |
+| ----------------------- | ----- | ------------------------------------------ |
+| Create Recipe           | ✅    | ✅                                         |
+| Create Families         | ✅    | ✅                                         |
+| Edit Families           | ✅    | ✅ (owned families)                        |
+| Delete Families         | ✅    | ✅ (owned families)                        |
+| Add User to Family      | ✅    | ✅ (owned families)                        |
+| Remove User from Family | ✅    | ✅ (owned families)                        |
+| Edit Recipe             | ✅    | ✅ (own recipes or family recipes)         |
+| Delete Recipe           | ✅    | ✅ (own recipes or family recipes)         |
+| Create Ingredient       | ✅    | ✅                                         |
+| Edit Ingredient         | ✅    | ✅ (when author of ingredient is the user) |
+| Delete Ingredient       | ✅    | ❌                                         |
+| Create Meal Plan        | ✅    | ✅                                         |
+| Edit Meal Plan          | ✅    | ✅ (own meal plans or family meal plans)   |
+| Delete Meal Plan        | ✅    | ✅ (own meal plans or family meal plans)   |
