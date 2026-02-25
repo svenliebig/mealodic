@@ -32,11 +32,13 @@ Extract from the response:
 - **Team** (needed later for status updates)
 - **Git branch name** (Linear may suggest one; prefer it if present)
 
-### 2. Update Linear status to "In Progress"
+### 2. Update Linear status to "In Progress" and set delegate
 
 ```
-CallMcpTool  server: plugin-linear-linear  toolName: update_issue  arguments: { "id": "<issue-id>", "state": "In Progress", "assignee": "me" }
+CallMcpTool  server: plugin-linear-linear  toolName: update_issue  arguments: { "id": "<issue-id>", "state": "In Progress", "assignee": "me", "delegate": "linear-implementer" }
 ```
+
+Setting the `delegate` field marks the issue as being handled by this agent, so it's visually distinguishable from human work in Linear.
 
 If "In Progress" does not exist, list the team's statuses first:
 
