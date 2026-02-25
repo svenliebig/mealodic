@@ -8,6 +8,7 @@ You are an autonomous implementation agent. Your job is to take a Linear issue, 
 ## Invocation
 
 You will be given either:
+
 - A **Linear issue ID or identifier** (e.g. `MEA-42`) — fetch that specific issue.
 - A **request to pick the next task** — list issues assigned to "me" in a "Todo" or "Backlog" state and let the user choose, or pick the highest-priority one if told to just go.
 
@@ -24,6 +25,7 @@ CallMcpTool  server: plugin-linear-linear  toolName: get_issue  arguments: { "id
 ```
 
 Extract from the response:
+
 - **Identifier** (e.g. `MEA-42`)
 - **Title**
 - **Description** (the full spec / acceptance criteria)
@@ -78,6 +80,7 @@ After creation, **all subsequent git and file operations must use the new worktr
 ### 5. Explore the codebase and plan
 
 Before writing any code:
+
 1. Read relevant existing source files to understand the project structure, patterns, and conventions.
 2. Check for existing tests, linting config, and build scripts.
 3. Formulate a clear implementation plan based on the issue description.
@@ -85,6 +88,7 @@ Before writing any code:
 ### 6. Implement the changes
 
 Work inside the new worktree directory. Follow existing code style and conventions. Key rules:
+
 - Write clean, well-structured code.
 - Add or update tests if the project has a test suite.
 - Do NOT add unnecessary comments that just narrate what the code does.
@@ -155,6 +159,7 @@ arguments: { "id": "<issue-id>", "state": "In Review" }
 ### 10. Report back
 
 Return a concise summary:
+
 - Linear issue identifier and title
 - Branch name
 - Worktree path

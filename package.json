@@ -2,14 +2,33 @@
   "name": "mealodic",
   "version": "0.0.1",
   "private": true,
+  "type": "module",
   "description": "Meal planning for individuals and families",
   "scripts": {
     "dev": "docker compose -f docker-compose.yml -f docker-compose.dev.yml up --build",
     "dev:down": "docker compose -f docker-compose.yml -f docker-compose.dev.yml down",
-    "dev:clean": "docker compose -f docker-compose.yml -f docker-compose.dev.yml down -v"
+    "dev:clean": "docker compose -f docker-compose.yml -f docker-compose.dev.yml down -v",
+    "dev:api": "pnpm --filter @mealodic/api run dev",
+    "dev:web": "pnpm --filter @mealodic/web run dev",
+    "build": "pnpm -r run build",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "typecheck": "pnpm -r run typecheck",
+    "clean": "pnpm -r run clean && rm -rf node_modules"
+  },
+  "engines": {
+    "node": ">=22",
+    "pnpm": ">=9"
   },
   "packageManager": "pnpm@9.15.4",
-  "engines": {
-    "node": ">=22"
+  "devDependencies": {
+    "@eslint/js": "^9.39.3",
+    "eslint": "^9.39.3",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "prettier": "^3.8.1",
+    "typescript-eslint": "^8.56.1"
   }
 }

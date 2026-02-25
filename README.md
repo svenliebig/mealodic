@@ -6,6 +6,8 @@ Meal planning for individuals and families.
 
 - [Docker](https://docs.docker.com/get-docker/) (v24+)
 - [Docker Compose](https://docs.docker.com/compose/install/) (v2+)
+- [Node.js](https://nodejs.org/) >= 20
+- [pnpm](https://pnpm.io/) >= 9
 
 ## Quick Start
 
@@ -43,9 +45,7 @@ Meal planning for individuals and families.
    | Email    | dev@mealodic.local |
    | Password | dev                |
 
-## Development
-
-### Project Structure
+## Project Structure
 
 ```
 ├── docker-compose.yml          # Base service definitions
@@ -55,11 +55,29 @@ Meal planning for individuals and families.
 │       └── realm-export.json   # Keycloak realm configuration
 ├── packages/
 │   ├── api/                    # Backend API (Fastify + TypeScript)
-│   └── web/                    # Frontend (React + Vite)
+│   ├── web/                    # Frontend (React + Vite)
+│   └── shared/                 # Shared TypeScript types
 ├── .env.example                # Environment variable template
 ├── pnpm-workspace.yaml         # Monorepo workspace config
 └── tsconfig.base.json          # Shared TypeScript config
 ```
+
+## Scripts
+
+| Command             | Description                        |
+| ------------------- | ---------------------------------- |
+| `pnpm dev`          | Start full Docker dev stack        |
+| `pnpm dev:api`      | Start API only (local)             |
+| `pnpm dev:web`      | Start web only (local)             |
+| `pnpm build`        | Build all packages                 |
+| `pnpm lint`         | Run ESLint                         |
+| `pnpm lint:fix`     | Run ESLint with auto-fix           |
+| `pnpm format`       | Format code with Prettier          |
+| `pnpm format:check` | Check formatting                   |
+| `pnpm typecheck`    | Run TypeScript type checking       |
+| `pnpm clean`        | Remove all build artifacts         |
+
+## Development
 
 ### Hot Reload
 
@@ -71,9 +89,6 @@ Both the API and web frontend support hot-reload in development mode:
 ### Useful Commands
 
 ```bash
-# Start the dev stack
-docker compose -f docker-compose.yml -f docker-compose.dev.yml up --build
-
 # Stop all services
 docker compose -f docker-compose.yml -f docker-compose.dev.yml down
 

@@ -24,4 +24,4 @@ The user can delete a shopping lists in the shopping list section. If the shoppi
 
 ## Checking Items
 
-The user can check items off the shopping list by clicking on the item and selecting the `Check` option. The item will then be shown  strikethrough and dimmed and moved to the bottom of it's category. Items will not be removed from a shopping lists in that sense but only marked as checked. When the user has everything on the shopping list checked, the shopping list will be marked as completed and shown in a different color in the bottom of the shopping list section. The user can delete the shopping list without a warning.
+The user can check items off the shopping list by clicking on the item and selecting the `Check` option. The item will then be shown strikethrough and dimmed and moved to the bottom of it's category. Items will not be removed from a shopping lists in that sense but only marked as checked. When the user has everything on the shopping list checked, the shopping list will be marked as completed and shown in a different color in the bottom of the shopping list section. The user can delete the shopping list without a warning.
